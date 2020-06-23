@@ -15,7 +15,7 @@
 
     <!--<aop:config>
         &lt;!&ndash; service 包下的所有的包的所有的类的任意参数 &ndash;&gt;
-        <aop:pointcut id="myPointcut" expression="execution(* cn.beanbang.springcore.service.*.*(..))"/>
+        <aop:pointcut id="myPointcut" expression="execution(* cn.beanbang.springcore.service.*.*(..)))"/>
 
         <aop:aspect ref="logAspect">
 
