@@ -2,7 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="cn.beanbang.springcore"></context:component-scan>
 
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
@@ -10,8 +13,8 @@
 
     <bean id="logAspect" class="cn.beanbang.springcore.common.LogAspect"></bean>
 
-    <aop:config>
-        <!-- service 包下的所有的包的所有的类的任意参数 -->
+    <!--<aop:config>
+        &lt;!&ndash; service 包下的所有的包的所有的类的任意参数 &ndash;&gt;
         <aop:pointcut id="myPointcut" expression="execution(* cn.beanbang.springcore.service.*.*(..))"/>
 
         <aop:aspect ref="logAspect">
@@ -22,11 +25,11 @@
 
             <aop:around method="around" pointcut-ref="myPointcut"></aop:around>
 
-            <!-- throwing: 把错误的对象传递给e参数 -->
+            &lt;!&ndash; throwing: 把错误的对象传递给e参数 &ndash;&gt;
             <aop:after-throwing method="err" pointcut-ref="myPointcut" throwing="e"></aop:after-throwing>
 
         </aop:aspect>
 
-    </aop:config>
+    </aop:config>-->
 
 </beans>

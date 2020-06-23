@@ -9,7 +9,7 @@ public class Aop {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         SysService sysService = context.getBean(SysService.class);
-//        sysService.getToken();
-        sysService.validate();
+        sysService.getToken();
+//        sysService.validate();
     }
 }
