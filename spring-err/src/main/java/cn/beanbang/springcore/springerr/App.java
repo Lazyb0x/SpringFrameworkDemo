@@ -16,6 +16,7 @@ public class App {
         user.setName("小鸣");
         user.setAge(160);
 
-        userService.saveUser(user);
+        boolean res = userService.saveUser(user);
+        System.out.println(res);
     }
 }

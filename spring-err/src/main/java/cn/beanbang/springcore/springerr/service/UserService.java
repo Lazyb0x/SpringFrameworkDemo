@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    public void saveUser(User user){
+    public boolean saveUser(User user){
 
         if (user.getName().indexOf('#')!=-1){
             MyThrowException.throwErr(MyExceptionCode.USER_NAME_EXCEPTION);
@@ -18,6 +18,8 @@ public class UserService {
         }
 
         System.out.println("saveuser: " + user);
+
+        return true;
     }
 
     public void updateUser(User user) {

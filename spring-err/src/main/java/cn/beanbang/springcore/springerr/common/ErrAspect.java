@@ -16,6 +16,8 @@ public class ErrAspect {
     @AfterThrowing(pointcut = "pointcut()", throwing = "e")
     public void err(JoinPoint joinPoint, Exception e){
 //        System.out.println("err: " + e.getMessage());
-        MyThrowException.throwErr(e);
+        //MyThrowException.throwErr(e);
+        throw new RuntimeException("测试");
+
     }
 }
