@@ -15,7 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = SpringConfig.class)
+@ContextConfiguration(classes = {SpringConfig.class})
 class IUserServiceTest {
 
     @Autowired
@@ -31,7 +31,7 @@ class IUserServiceTest {
     }
 
     @Test
-    @Transactional
+    @Transactional      // Transactional 注解再此会使方法执行完事务回滚
     public void add() {
         User user = new User("xiaohong", 20);
         int res = userService.add(user);

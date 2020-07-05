@@ -13,6 +13,7 @@ import java.util.List;
 @Configuration
 public class App {
     public static void main(String[] args){
+        // 加载配置文件类
         ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
         UserDao userDao = context.getBean(UserDao.class);
         List<User> users = userDao.findAll();

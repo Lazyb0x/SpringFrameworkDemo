@@ -35,7 +35,7 @@ public class UserDao {
         try {
             user = jdbcTemplate.queryForObject(sql, new UserRowMapper(), id);
         }
-        catch (EmptyResultDataAccessException e){
+        catch (EmptyResultDataAccessException e){   // 如果查询为空会抛该异常
             e.printStackTrace();
         }
 

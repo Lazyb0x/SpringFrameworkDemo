@@ -7,6 +7,6 @@
 * spring-jdbc：使用 JdbcTemplate 的 MySQL CRUD 例子
   * 注解和配置类来配置 Bean;
   * 声明式事务
-  * 含有事务回滚的单元测试
+  * 含有事务回滚的 JUnit5 单元测试
   * Druid 连接池
 

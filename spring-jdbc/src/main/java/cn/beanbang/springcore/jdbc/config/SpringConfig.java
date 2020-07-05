@@ -34,6 +34,9 @@ public class SpringConfig {
         return dataSource;
     }
 
+    /**
+     * 启用声明式事务时，配置该 Bean 并添加 `@EnableTransactionManagement` 注解
+     */
     @Bean
     PlatformTransactionManager createTxManager(@Autowired DataSource dataSource){
         return new DataSourceTransactionManager(dataSource);
