@@ -14,6 +14,7 @@
         <module>spring-err</module>
         <module>spring-ioc</module>
         <module>spring-jdbc</module>
+        <module>spring-cache</module>
     </modules>
 
     <properties>

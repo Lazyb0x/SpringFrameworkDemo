@@ -4,6 +4,7 @@
 * spring-aop：切面编程的简单例子
 * spring-err：用 AOP 来统一异常的抛出
 * spring-log：用 AOP 来统一日志的输出
+* spring-cache：使用声明式缓存的简单例子
 * spring-jdbc：使用 JdbcTemplate 的 MySQL CRUD 例子
   * 注解和配置类来配置 Bean;
   * 声明式事务
