@@ -24,7 +24,7 @@ public class LogAspect {
     }
 
     @Around("pointCut()")
-    public void around(ProceedingJoinPoint joinPoint){
+    public Object around(ProceedingJoinPoint joinPoint){
         System.out.println("around: " + joinPoint.getSignature());
 
         Object result = null;
@@ -37,7 +37,7 @@ public class LogAspect {
         }
 
         System.out.println("around: finished, result: " + result);
-
+        return result;
     }
 
     /**

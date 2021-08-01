@@ -5,13 +5,15 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="cn.beanbang.springcore"></context:component-scan>
+    <context:component-scan base-package="cn.beanbang.springcore"/>
 
-    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <aop:aspectj-autoproxy/>
 
-    <bean id="sysService" class="cn.beanbang.springcore.service.SysService"></bean>
+    <bean id="sysService" class="cn.beanbang.springcore.service.SysService"/>
 
-    <bean id="logAspect" class="cn.beanbang.springcore.common.LogAspect"></bean>
+    <bean id="userService" class="cn.beanbang.springcore.service.impl.UserService"/>
+
+    <bean id="logAspect" class="cn.beanbang.springcore.common.LogAspect"/>
 
     <!--<aop:config>
         &lt;!&ndash; service 包下的所有的包的所有的类的任意参数 &ndash;&gt;

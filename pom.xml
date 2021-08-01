@@ -19,6 +19,7 @@
 
     <properties>
         <spring.version>5.2.7.RELEASE</spring.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>
