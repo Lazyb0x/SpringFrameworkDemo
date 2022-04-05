@@ -10,4 +10,5 @@
   * 声明式事务
   * 含有事务回滚的 JUnit5 单元测试
   * Druid 连接池
+* spring-event：事件机制
 
